@@ -1,0 +1,107 @@
+$fontSize: 13px;
+$padding: calc($fontSize / 10);
+
+.emulated {
+  position: absolute;
+  top: 50%;
+  line-height: 1px;
+  font-size: $fontSize;
+  border: none;
+  outline: none;
+  stroke: none;
+  visibility: hidden;
+}
+
+.container {
+  position: relative;
+  flex-shrink: 0;
+  display: flex;
+  padding: 10px;
+  gap: 10px;
+  width: calc(100% - 20px);
+  margin: 0 auto 10px;
+  padding: $padding $padding $padding $fontSize;
+  border-radius: 20px;
+  background: #222;
+
+  .select__image,
+  .submit {
+    flex-shrink: 0;
+  }
+
+  .select__image {
+    opacity: .5;
+    transition: .2s ease;
+    cursor: pointer;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+  
+  .textarea {
+    // background from theme
+    font-size: $fontSize;
+    width: 100%;
+    height: 16px;
+    resize: none;
+    margin: $fontSize 0;
+
+    outline: none;
+    border: none;
+    
+    color: inherit;
+    background: transparent;
+  }
+
+  .submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: $fontSize * 3;
+    height: $fontSize * 3;
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+    transition: .2s ease;
+    cursor: pointer;
+
+    &:hover {
+      background: rgb($bgLight-10);
+      transform: scale(.9);
+    }
+  
+    .icon {
+      padding: 30%;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
+.tools {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 10px;
+
+  .tool {
+    all: unset;
+    font-size: 14px;
+    margin: 0 0 10px;
+    padding: 6px 15px;
+    background: #fff;
+    color: #000;
+    border-radius: 1em;
+    transition: .2s ease;
+    cursor: pointer;
+    
+    &:hover {
+      opacity: .8;
+      transform: scale(.98);
+    }
+  }
+}

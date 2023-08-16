@@ -1,0 +1,54 @@
+$padding: .6rem;
+
+.message {
+  display: flex;
+  align-items: flex-start;
+  max-width: 80%;
+  gap: .4rem;
+
+  &.right {
+    flex-direction: row-reverse;
+
+    .avatar {
+      display: none;
+    }
+  }
+
+  &.gradient .content {
+    background: linear-gradient(
+      45deg,
+      var(--accent-1),
+      var(--accent-2)
+    );
+  }
+
+  .avatar {
+    $size: 2rem;
+    flex-shrink: 0;
+    position: relative;
+    width: $size;
+    height: $size;
+    border-radius: calc($size / 2);
+
+    img {
+      object-fit: cover;
+      border-radius: inherit;
+    }
+  }
+
+  .content {
+    background: rgb($bgLight-10);
+    padding: $padding;
+    border-radius: 1rem;
+    word-break: break-word;
+  }
+
+  .date {
+    $fontSize: .8em;
+    flex-shrink: 0;
+    margin-top: calc($padding / 2 + $fontSize);
+    font-size: $fontSize;
+    opacity: .2;
+    white-space: nowrap;
+  }
+}

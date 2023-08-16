@@ -1,0 +1,14 @@
+.message {
+  display: flex;
+  flex-shrink: 0;
+  padding: .2rem .4rem;
+  transition: .1s ease;
+
+  &.right {
+    justify-content: flex-end;
+  }
+
+  &:hover {
+    background: rgb($bgDark-20);
+  }
+}

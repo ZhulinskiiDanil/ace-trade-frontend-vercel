@@ -1,0 +1,37 @@
+{
+  "name": "ace-trade",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.9.5",
+    "@types/fuzzy-search": "^2.1.2",
+    "@types/node": "20.2.5",
+    "@types/react": "18.2.7",
+    "@types/react-dom": "18.2.4",
+    "@types/react-redux": "^7.1.25",
+    "@types/uuid": "^9.0.1",
+    "clsx": "^1.2.1",
+    "cookies-next": "^2.1.2",
+    "cyrillic-to-translit-js": "^3.2.1",
+    "eslint": "8.41.0",
+    "eslint-config-next": "^13.4.16",
+    "fuzzy-search": "^3.2.1",
+    "next": "^13.4.16",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-query": "^3.39.3",
+    "react-redux": "^8.1.1",
+    "sharp": "^0.32.1",
+    "typescript": "5.0.4",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "sass": "^1.63.6"
+  }
+}

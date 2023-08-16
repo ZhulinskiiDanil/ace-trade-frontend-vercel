@@ -1,0 +1,6 @@
+.chats {
+  background: rgb($bgDark-10);
+  flex-shrink: 0;
+  min-width: 220px;
+  border-right: 1px solid var(--bg-light-10, #2D2D2D);
+}

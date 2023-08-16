@@ -1,0 +1,73 @@
+.heart {
+  z-index: 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: .2s ease;
+  }
+
+  &::after, &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    border: solid rgba(70, 166, 255, 0.8);
+    border-width: 10px;
+    opacity: 0;
+    transition: .5s ease;
+  }
+
+  &.active {
+    animation: scaling .5s ease;
+
+    svg {
+      fill: #46a6ff;
+      border: #46a6ff;
+      stroke: #46a6ff;
+    }
+    
+    @keyframes scaling {
+      from {
+        transform: scale(1);
+      } 60% {
+        transform: scale(1.2);
+      } to {
+        transform: scale(1);
+      }
+    }
+
+    &::after, &::before {
+      width: 150%;
+      height: 150%;
+      border-width: 1px;
+      animation: newCircle .5s ease;
+    }
+
+    &::before {
+      animation-delay: .15s;
+      transition-delay: .15s;
+    }
+
+    @keyframes newCircle {
+      from {
+        opacity: 0;
+      } 50% {
+        opacity: 1;
+      } to {
+        opacity: 0;
+      }
+    }
+  }
+}

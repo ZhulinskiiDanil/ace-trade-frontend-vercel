@@ -1,0 +1,67 @@
+$avatarSize: 6rem;
+$decorSpace: .3;
+
+.head {
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.3;
+
+    .avatar {
+      position: relative;
+      width: $avatarSize;
+      height: $avatarSize;
+      border-radius: 50%;
+      border: calc($avatarSize * .03) solid rgb($bgLight-10);
+      box-shadow: -4px 4px 1rem 0 rgba(0, 0, 0, .4);
+
+      .accent {
+        z-index: -1;
+        position: absolute;
+        width: $avatarSize * .8;
+        height: $avatarSize * .7;
+        border-radius: 50%;
+        filter: blur(calc($avatarSize * .2));
+        opacity: .4;
+      
+        &.first {
+          background: rgb($accent-1);
+          left: calc($avatarSize * $decorSpace * -1 * .2);
+          top: calc($avatarSize * $decorSpace * -1 * .2);
+        }
+      
+        &.second {
+          background: rgb($accent-2);
+          right: calc($avatarSize * $decorSpace * -1 * .2);
+          bottom: calc($avatarSize * $decorSpace * -1 * .2);
+        }
+      }
+
+      img {
+        border-radius: inherit;
+        object-fit: cover;
+      }
+    }
+
+    .username {
+      font-size: 1.2rem;
+      font-weight: bold;
+      white-space: nowrap;
+      margin-top: 1rem;
+      line-height: inherit;
+    }
+
+    .createdAt {
+      font-size: .8rem;
+      opacity: .2;
+      line-height: inherit;
+    }
+  }
+}

@@ -1,0 +1,83 @@
+$imageSpacing: 1.2rem;
+$imageWidth: clamp(240px, 40%, 320px);
+$borderRadius: 1rem;
+
+.image__section {
+  z-index: 1;
+  position: relative;
+  flex-shrink: 0;
+  width: $imageWidth;
+  min-height: 220px;
+
+  .content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    width: calc(100% + $imageSpacing);
+    border-radius: $borderRadius;
+    background: #222;
+    box-shadow: .65rem 0 1.85rem 0 rgba(0, 0, 0 ,.5);
+    overflow: hidden;
+
+    @media (max-width: 540px) {
+      width: 100%;
+      height: calc(100% + $imageSpacing);
+    }
+  }
+
+  .addToFavorite {
+    $size: 3.4rem;
+    position: absolute;
+    z-index: 1;
+    right: calc($size / 4 * -1);
+    top: calc($size / 4 * -1);
+    width: $size;
+    height: $size;
+    background: #fff;
+    border-radius: 50%;
+
+    .heart {
+      position: absolute;
+      width: 50%;
+      height: 50%;
+      left: calc($size * .2);
+      bottom: calc($size * .2);
+    }
+  }
+
+  .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    user-select: none;
+
+    &:hover {
+      .main {
+        transform: scale(1.05);
+      }
+    }
+
+    .blured,
+    .main {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      transition: .2s ease .1s;
+      cursor: pointer;
+    }
+
+    .blured {
+      filter: brightness(80%) blur(2px);
+    }
+
+    .main {
+      img {
+        object-fit: contain;
+      }
+    }
+  }
+}

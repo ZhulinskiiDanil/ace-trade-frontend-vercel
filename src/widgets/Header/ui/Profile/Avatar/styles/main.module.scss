@@ -1,0 +1,16 @@
+$burger-width: 1px;
+$burger-color: white;
+
+.avatar {
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  overflow: hidden;
+  border-radius: 1rem;
+  border: 1px solid #555;
+  cursor: pointer;
+
+  img {
+    object-fit: cover;
+  }
+}

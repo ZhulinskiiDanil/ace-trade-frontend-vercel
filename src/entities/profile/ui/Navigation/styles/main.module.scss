@@ -1,0 +1,9 @@
+.nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: .4rem;
+  padding: .4rem;
+
+  background: rgb($bgDark-20);
+}

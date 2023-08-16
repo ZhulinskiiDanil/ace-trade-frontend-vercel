@@ -1,0 +1,65 @@
+.nav {
+  display: flex;
+  justify-content: center;
+  background: rgb($bgDark-20);
+  overflow: auto;
+  overflow-y: hidden;
+
+  &::-webkit-scrollbar {
+    height: 5px;
+  }
+
+  .center {
+    display: flex;
+    padding: 0 .6rem;
+  }
+
+  &__item {
+    flex-shrink: 0;
+    $accentHeight: 3rem;
+    position: relative;
+
+    padding: 1rem .6rem;
+    font-weight: 500;
+    user-select: none;
+    opacity: .6;
+
+    transition: .2s ease;
+    cursor: pointer;
+
+    &:hover {
+      opacity: .8;
+    }
+
+    span {
+      white-space: nowrap;
+    }
+
+    &.active {
+      opacity: 1;
+
+      &::after {
+        transform: translate3d(-50%, -50%, 0) scale(0);
+        transition: .2s ease .1s;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: calc($accentHeight * -.5);
+      left: 50%;
+      top: 50%;
+      transform: translate3d(-50%, -50%, 0) scale(0);
+
+      width: $accentHeight;
+      height: $accentHeight;
+
+      border-radius: 50%;
+
+      background: #fff;
+      opacity: .1;
+      transition: .1s ease;
+    }
+  }
+}

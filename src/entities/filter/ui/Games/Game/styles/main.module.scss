@@ -1,0 +1,30 @@
+.game {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgb($bgDark-10);
+  padding: .6rem;
+  border-radius: .4rem;
+  user-select: none;
+  transition: .1s ease;
+  cursor: pointer;
+
+  &:hover {
+    opacity: .8;
+  }
+
+  &.active {
+    background: rgb($bgLight-10);
+    opacity: 1;
+  }
+
+  .name {
+    font-weight: 500;
+    font-size: 12px;
+  }
+
+  .count {
+    align-self: flex-end;
+    font-weight: 500;
+  }
+}

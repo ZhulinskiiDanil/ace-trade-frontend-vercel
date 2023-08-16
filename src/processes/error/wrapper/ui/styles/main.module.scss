@@ -1,0 +1,35 @@
+.error {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+
+  .code {
+    font-size: 4rem;
+    font-weight: 900;
+  }
+
+  .hr {
+    width: 100%;
+    max-width: 200px;
+    border: 1px solid $bgDark-20
+  }
+
+  .text {
+    font-size: 1.2rem;
+    max-width: 260px;
+    text-align: center;
+  }
+
+  .links {
+    display: flex;
+    margin-top: 1rem;
+
+    .link {
+      padding: 0 .4rem;
+      color: rgb($accent-1);
+    }
+  }
+}

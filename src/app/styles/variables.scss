@@ -1,0 +1,65 @@
+@mixin gradientBorder($opacity: 1, $deg: 45deg) {
+  &::after {
+    $borderWidth: 1px;
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: -$borderWidth;
+    right: -$borderWidth;
+    bottom: -$borderWidth;
+    left: -$borderWidth;
+    border-radius: inherit;
+    background: linear-gradient(
+      $deg,
+      transparent 15%,
+      rgba(255, 255, 255, $opacity),
+      transparent,
+      rgba(255, 255, 255, $opacity),
+      transparent
+    );
+  }
+}
+
+/* Colors */
+$accent-1: 254 148 77;
+$accent-2: 251 157 147;
+$accent-secondary: 253 234 206;
+
+$bg: 12 12 13;
+$bgDark-40: 20 20 20;
+$bgDark-30: 27 27 27;
+$bgDark-20: 24 24 24;
+$bgDark-10: 35 35 35;
+$bgDark-05: 37 37 37;
+$bgMedium: 40 40 40;
+
+$bgLight-05: 43 43 43;
+$bgLight-10: 45 45 45;
+$bgLight-20: 50 50 50;
+$bgLight-30: 55 55 55;
+$bgLight-40: 60 60 60;
+
+$componentsHeader: 24 24 24;
+$componentsFooter: 20 20 20;
+
+$colorsGreen: 104 232 101;
+$colorsGreen_10: 93 214 91;
+$colorsGreen_30: 77 180 76;
+$colorsGreen_40: 67 160 66;
+
+$colorsRed: 245 81 81;
+$colorsRed-10: 227 72 72;
+$colorsRed-20: 211 66 66;
+$colorsRed-30: 190 59 59;
+$colorsRed-40: 161 49 49;
+
+$colorsOrange: 245 150 81;
+$colorsOrange-10: 227 146 72;
+$colorsOrange-20: 211 144 66;
+$colorsOrange-30: 190 130 59;
+$colorsOrange-40: 161 109 49;
+
+/* Components */
+$uiInput: 19 19 19;
+
+$uiButton: 30 30 30;

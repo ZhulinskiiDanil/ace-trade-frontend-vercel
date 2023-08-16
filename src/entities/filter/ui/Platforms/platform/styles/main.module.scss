@@ -1,0 +1,37 @@
+.platform {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .2rem;
+  background: rgb($bgDark-10);
+  border-radius: .5rem;
+  user-select: none;
+  transition: .2s ease;
+  cursor: pointer;
+
+  &.active {
+    background: rgb($bgLight-05);
+  }
+
+  &:hover {
+    opacity: .8;
+  }
+
+  .image {
+    $size: 2rem;
+    position: relative;
+    width: $size;
+    height: $size;
+    border-radius: .45rem;
+    background: rgb($bgLight-20);
+
+    img {
+      object-fit: cover;
+      border-radius: inherit;
+    }
+  }
+
+  .name {
+
+  }
+}

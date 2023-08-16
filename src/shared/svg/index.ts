@@ -1,0 +1,11 @@
+export * from './icons/chats'
+export * from './icons/support'
+export * from './icons/heart'
+export * from './icons/user'
+export * from './icons/wallet'
+export * from './icons/settings'
+export * from './icons/warning'
+export * from './icons/archive'
+export * from './icons/sign-out'
+
+export * from './icons/snowflake'

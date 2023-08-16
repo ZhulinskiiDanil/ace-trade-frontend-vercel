@@ -1,0 +1,34 @@
+.game {
+  --scale: 1;
+  --index: 0;
+  
+  $size: 3.4rem;
+
+  flex-shrink: 0;
+  position: relative;
+  background: rgb($bgDark-30);
+  transform: translate3d(0, 0, 0);
+  width: calc($size * var(--scale));
+  height: calc($size * var(--scale));
+  border-radius: calc($size / 4);
+  transition: .2s ease;
+  user-select: none;
+  box-shadow: .5rem 0 1rem 0 rgba(0, 0, 0, .5);
+  cursor: pointer;
+
+  &:not(:first-child) {
+    margin-left: calc(-10px);
+  }
+
+  z-index: calc(1000 - var(--index));
+
+  &:hover {
+    filter: brightness(80%);
+    scale: .95;
+  }
+
+  img {
+    border-radius: inherit;
+    object-fit: cover;
+  }
+}

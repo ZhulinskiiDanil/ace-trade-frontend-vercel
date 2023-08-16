@@ -1,0 +1,27 @@
+$burger-width: 1px;
+$burger-color: white;
+
+.icon {
+  cursor: pointer;
+  position: relative;
+  width: 1.4rem;
+  height: .8rem;
+  border-top: $burger-width solid $burger-color;
+  border-bottom: $burger-width solid $burger-color;
+  transition: .2s ease;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    width: 100%;
+    border-top: $burger-width solid $burger-color;
+    background: $burger-color;
+  }
+
+  &:hover {
+    opacity: .8;
+  }
+}

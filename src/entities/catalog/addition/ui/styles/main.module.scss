@@ -1,0 +1,12 @@
+.addition {
+  margin: .4rem 0;
+  padding: 1rem 0;
+  font-size: 1.4rem;
+  background: #000;
+  text-align: center;
+  font-weight: 900;
+
+  span[data-accent] {
+    color: rgb($accent-1);
+  }
+}

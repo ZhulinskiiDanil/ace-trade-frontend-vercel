@@ -1,0 +1,16 @@
+.balance {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: .5rem 0;
+  height: 100%;
+  font-weight: 900;
+
+  .amount {
+    font-size: 1.4rem;
+
+    .currency {
+      opacity: .5;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.user {
+  z-index: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  cursor: pointer;
+
+  .avatar {
+    $size: 3rem;
+    position: relative;
+    width: $size;
+    height: $size;
+    user-select: none;
+    -webkit-user-drag: none;
+    background: rgb($bgLight-10);
+
+    border-radius: 50%;
+    @include gradientBorder(.4);
+
+    img {
+      object-fit: cover;
+      border-radius: inherit;
+      display: none;
+    }
+  }
+
+  .info {
+    font-size: .8rem;
+
+    .username,
+    .rating,
+    .subtitle {
+      line-height: inherit;
+    }
+
+    .username {
+      font-weight: 400;
+    }
+
+    .rating {
+      opacity: .4;
+    }
+
+    .subtitle {
+      opacity: .4;
+    }
+  }
+}

@@ -1,0 +1,70 @@
+.header {
+  $height: 60px;
+  position: sticky;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  top: 0;
+  z-index: 1;
+  padding: 0 1em;
+  height: $height;
+  background: rgb($componentsHeader);
+  transition: .2s ease;
+
+  &.hidden {
+    top: calc($height * -1);
+    transition: .4s ease;
+  }
+
+  .cw {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1080px;
+    height: 100%;
+    box-sizing: content-box;
+  }
+
+  .logo {
+    position: relative;
+    width: 2.2rem;
+    height: 2.2rem;
+    transition: .2s ease;
+    cursor: pointer;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+
+  .nav {
+    display: flex;
+    justify-content: center;
+
+    &__item {
+      padding: .4em 1em;
+      transition: .2s ease;
+
+      &:hover {
+        opacity: .8;
+      }
+    }
+  }
+
+  .extensions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    height: 100%;
+  }
+}
+
+@media (max-width: 750px) {
+  .header {
+    .nav {
+      display: none;
+    }
+  }
+}

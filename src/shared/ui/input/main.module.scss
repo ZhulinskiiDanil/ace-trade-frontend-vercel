@@ -1,0 +1,47 @@
+.label {
+  display: block;
+  position: relative;
+  background: rgb($uiInput);
+  border: 1px solid rgb($bgDark-10);
+  color: white;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 12px;
+  user-select: none;
+  transition: .2s ease;
+  overflow: hidden;
+  cursor: text;
+
+  &:has(input:focus) {
+    border-color: rgb($bgLight-30);
+  }
+
+  &.hidden {
+    display: none;
+  }
+
+  &.fill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &.rounded {
+    border-radius: 999999rem;
+  }
+
+  &.fullWidth {
+    width: 100%;
+  }
+
+  .input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: inherit;
+  }
+}

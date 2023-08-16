@@ -1,0 +1,135 @@
+$padding: 1.2rem;
+$borderRadius: 1.2rem;
+
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+
+  .cw {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .title {
+    text-align: left;
+    font-weight: 900;
+    font-size: 1.4rem;
+
+    span[data-gradient] {
+      background: -webkit-linear-gradient(
+        -45deg, rgb($accent-1), rgb($accent-2)
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  .error {
+    position: relative;
+    padding: .6rem .8rem;
+    
+    display: flex;
+    justify-content: space-between;
+    
+    border-radius: .5rem;
+    background: rgb($bgDark-20);
+    transition: .3s ease;
+    
+    border: 1px solid rgb($bgLight-20);
+
+    &.hidden {
+      opacity: 0;
+      transform: translate3d(0, .5rem, 0);
+    }
+
+    [data-text-content] {
+      color: rgb($colorsRed);
+      letter-spacing: .02em;
+    }
+
+    .cross {
+      width: 1rem;
+      height: 1rem;
+      user-select: none;
+      -webkit-user-drag: none;
+      transition: .15s ease;
+      cursor: pointer;
+
+      &:hover {
+        opacity: .8;
+        transform: scale(1.08);
+      }
+    }
+  }
+
+  .warning {
+    opacity: .4;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    .accent {
+      color: rgb($accent-1);
+      font-weight: bold;
+    }
+  }
+
+  .auth {
+    display: flex;
+    flex-direction: column;
+    gap: $padding * .6;
+
+    position: relative;
+    width: 100%;
+    padding: $padding;
+    border-radius: $borderRadius;
+    background: rgb($bg);
+
+    @include gradientBorder(.2);
+  }
+
+  .auth .decor {
+    $size: calc(100% + .4rem);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    z-index: -1;
+    width: $size;
+    height: $size;
+
+    .shadow {
+      $shadowSize: 8rem;
+      position: absolute;
+      z-index: -1;
+      left: 50%;
+      top: 50%;
+      transform: translate3d(-50%, -50%, 0);
+
+      height: 100%;
+      width: 100%;
+      background: rgb($accent-1);
+      border-radius: 50%;
+      opacity: .1;
+      filter: blur($shadowSize / 2);
+
+      animation: ShowShadow 5s ease;
+      
+      @keyframes ShowShadow {
+        from {
+          opacity: 0;
+          width: 0;
+          height: 0;
+        }
+      }
+    }
+  }
+}

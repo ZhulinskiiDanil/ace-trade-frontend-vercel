@@ -1,0 +1,43 @@
+.wrapper {
+  display: flex;
+  width: 100%;
+  min-width: 0;
+  height: 100vh;
+
+  .node {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: var(--bg--dark--20);
+
+    .empty {
+      padding: .4rem .8rem;
+      border-radius: 1rem;
+      background: rgb($bgLight-10);
+    }
+
+    &.chatIsEmpty {
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .chats {
+    &:not(.chatIsEmpty) {
+      display: none;
+    }
+
+    &.chatIsEmpty {
+      flex-shrink: 1;
+      width: 100%;
+    }
+  }
+
+  :has(.chats.chatIsEmpty) {
+    .node {
+      display: none;
+    }
+  }
+}

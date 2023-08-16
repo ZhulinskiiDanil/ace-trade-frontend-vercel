@@ -1,0 +1,41 @@
+$borderRadius: 1rem;
+
+.card {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  width: 340px;
+  height: 180px;
+  border-radius: $borderRadius;
+  padding: .5rem;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(53, 53, 53, 0.2);
+    border-radius: inherit;
+    backdrop-filter: blur(20px);
+    will-change: backdrop-filter;
+  }
+  
+  // Decor
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3rem;
+    background: #fff;
+    opacity: .3;
+    border-radius: $borderRadius;
+  }
+}
